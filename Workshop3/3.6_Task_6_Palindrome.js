@@ -9,17 +9,11 @@ process.stdin.on("data",function(inputFromUser){
     let input = inputFromUser.toString().trim().toUpperCase().replace(/\s+/g, '')
     for (i=0; i < (input.length/2); i++){
         if (input[i]!=input[input.length-1-i]){
-            process.stdout.write(inputFromUser()+" Is not a palindrome\n");
+            process.stdout.write(inputFromUser.toString().trim()+" Is not a palindrome\n");
             process.exit()
         }
 
    }
-   process.stdout.write(inputFromUser.toString()+" Is a palindrome\n")
+   process.stdout.write(inputFromUser.toString().trim()+" Is a palindrome\n")
    process.exit()
 })
-/* let inputback = input.split('').reverse().join('')
-    if (input == inputback){
-        process.stdout.write(input.toLocaleLowerCase()+" is a palindrome\n")
-    } else {
-        process.stdout.write(input.toLocaleLowerCase()+" isn't a palindrome\n")
-    }*/
